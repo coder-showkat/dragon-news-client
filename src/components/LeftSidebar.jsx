@@ -10,7 +10,9 @@ const LeftSidebar = () => {
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const res = await axios.get("http://localhost:4001/api/categories");
+      const res = await axios.get(
+        "https://news-dragon-sam.vercel.app/api/categories"
+      );
       if (res.status === 200) {
         setCategories(res.data.categories);
       }

@@ -8,7 +8,7 @@ const EditorsInsight = ({ category_id, newsId }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:4001/api/categories/${category_id}`)
+    fetch(`https://news-dragon-sam.vercel.app/api/categories/${category_id}`)
       .then((res) => res.json())
       .then((data) =>
         setNews(data.news.filter((i) => i._id !== newsId).slice(0, 3))
